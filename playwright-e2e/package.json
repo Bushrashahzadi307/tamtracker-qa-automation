@@ -1,0 +1,26 @@
+{
+  "name": "tamtracker-qa-playwright",
+  "version": "1.0.0",
+  "description": "Playwright E2E + API test automation for TAMtracker — B2B market readiness platform. Managed by Bushra Shahzadi, Senior SQA Engineer at Innovation Insight.",
+  "scripts": {
+    "test": "playwright test",
+    "test:auth": "playwright test tests/auth/",
+    "test:tam": "playwright test tests/tam/",
+    "test:dashboard": "playwright test tests/dashboard/",
+    "test:ai-coach": "playwright test tests/ai-coach/",
+    "test:billing": "playwright test tests/billing/",
+    "test:integrations": "playwright test tests/integrations/",
+    "test:agency": "playwright test tests/agency/",
+    "test:api": "playwright test tests/api/",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:ci": "playwright test --reporter=github",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen https://tamtracker.io"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@types/node": "^20.0.0",
+    "dotenv": "^16.4.5"
+  }
+}
